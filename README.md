@@ -1,1 +1,13 @@
-#This is a basic CSS refresher
+### This is a basic CSS refresher:
+- Implementing CSS
+- Using Selectors
+- Fonts, Colors, etc
+- Backgrounds and Borders
+- Box Model, Margin and Padding
+- Floating and Alignment
+- Display Property
+- Link and Button Styling
+- Creating Menus
+- Positioning
+- Form Styling
+- Dev Tools
