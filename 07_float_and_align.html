@@ -6,21 +6,81 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Float and Align</title>
     <style>
+        /* all */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.4em;
+            background: darkcyan;
+        }
+        
+        .container {
+            /* max-width will stop the ugly scroll  */
+            max-width: 960px;
+            /* 
+            -to center the content on the page, use margin: auto (left-right) 
+            -to move from top and bottom, give before auto 4example 30px
+            */
+            margin: 30px auto;
+        }
+
+        .box {
+            background: chocolate;
+            color: white;
+            border: 1px solid #333;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+        }
+
+        .box p {
+            /* text aligh */
+            text-align: left;
+            text-align: right;
+            text-align: center;
+            text-align: justify;
+        }
+
+        #box-2 {
+            float: left; 
+            width: 69%;
+        }
+
+        #box-3 {
+            float: right; 
+            width: 29%;
+        }
+        /* old way to push down the last paragraph */
+        .clr {
+            clear: both;
+        }
+
     
     </style>
 </head>
 <body>
-    <div id="box-1" class="box">
-        <h3>Heading</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, commodi optio eius a dolore est culpa ducimus reprehenderit mollitia omnis!</p>
-    </div>
-    <div id="box-2" class="box">
-        <h3>Heading</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, commodi optio eius a dolore est culpa ducimus reprehenderit mollitia omnis!</p>
-    </div>
-    <div id="box-3" class="box">
-        <h3>Heading</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, commodi optio eius a dolore est culpa ducimus reprehenderit mollitia omnis!</p>
+    <!-- wrap the full content in container to make it responsive with max-width and margin auto -->
+    <div class="container">
+        <div id="box-1" class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, commodi optio eius a dolore est culpa ducimus reprehenderit mollitia omnis!</p>
+        </div>
+        <div id="box-2" class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, commodi optio eius a dolore est culpa ducimus reprehenderit mollitia omnis!</p>
+        </div>
+        <div id="box-3" class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, commodi optio eius a dolore est culpa ducimus reprehenderit mollitia omnis!</p>
+        </div>
+        <!-- clear class -->
+        <div class="clr"></div>
+        <div id="box-4" class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, commodi optio eius a dolore est culpa ducimus reprehenderit mollitia omnis!</p>
+        </div>
     </div>
 </body>
 </html>
