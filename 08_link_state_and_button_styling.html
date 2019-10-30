@@ -5,8 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Link State and Button Styling</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        a {
+            /* default is underline */
+            text-decoration: none;
+        }
+
+        a:hover {
+            /* it will be overwrited.. */
+            color: rgb(255, 99, 71);
+            /* font-size: 20px; */
+            /* text-decoration: underline; */
+        }
+
+        /* a:visited {
+            color: violet;
+        } */
+
+        /* a:active {
+            color: yellowgreen;
+
+        } */
+
+        /* ---------Button Styling--------*/
+        .btn {
+            background: rgb(96, 96, 214);
+            color: #fff;
+            /* border none or 0 */
+            border: none;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            /* by default, for the button, there is no cursor...only a pointer */
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            color:rgb(78, 212, 60);
+            background: rgb(72, 72, 233);
+        }
+    </style>
 </head>
 <body>
-
+    <br>
+    <a class="btn" href="#">My Link</a>
+    <br>
+    <br>
+    <button class="btn">My Button</button>
 </body>
 </html>
