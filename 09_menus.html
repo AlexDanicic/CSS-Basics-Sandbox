@@ -5,8 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Menu Styling</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background: olive;
+            border-radius: 5px;
+            /* to fix the background of navbar li */
+            overflow: auto;
+        }
+
+        /* float the navbar */
+        .navbar li {
+            float: left;
+        }
+
+        .navbar li a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 20px;
+        }
+
+        /* hover change for background */
+        .navbar li a:hover {
+            background-color: olivedrab;
+        }
+
+
+
+        /* ------------------------------------------------- */
+
+
+        /* Side Menu */
+        .side-menu {
+            /* remove the default bulet style */
+            list-style: none;
+            border: 1px rgb(128, 128, 128) solid;
+            border-radius: 15px;
+            width: 300px;
+            padding: 20px;
+        }
+
+        .side-menu li {
+            font-size: 18px;
+            line-height: 2.4em;
+            border-bottom: 1px rgb(128, 128, 128) dotted;
+        }
+
+        /* Remove the last dotted border with sudo selector */
+        .side-menu li:last-child {
+            border: none;
+        }
+
+        .side-menu li a {
+            color: #333;
+            /* remove the underline */
+            text-decoration: none;
+        }
+
+        /* change the color for the hover */
+        .side-menu li a:hover {
+            color: orangered;
+            /* font-size: 19px; */
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- Navbar -->
+    <ul class="navbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <br>
+    <br>
+       <!-- Side Menu -->
+    <ul class="side-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
 </body>
 </html>
