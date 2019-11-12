@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Visibilit, Order and Negative Margin</title>
+    <style>
+        #first, #second{
+            background: #333;
+            color: #fff;
+            margin: 20px;
+            padding: 20px;
+            min-width: 80%;
+        }
+
+        #third {
+            background: rgb(136, 131, 131);
+            color: #fff;
+            margin: 20px;
+            padding: 20px;
+            min-width: 80%;
+        }
+
+        #third>h1 {
+            color: red !important;
+            margin-top: -60px;
+            margin-left: -500px;
+        }
+
+        h1 {
+            text-align: center;
+            /* display none will move the element out, and the space as well */
+            /* display: none; */
+            /* visibility hidden will hide the element, but it will hold that space */
+            /* visibility: hidden; */
+            /* the !important will overwrite the red color added under*/
+            color: greenyellow !important;
+        }
+
+        h1.first {
+            color: red;
+        }
+
+        p {
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="first">
+        <h1 class="first">Hello World!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At neque voluptates sint libero nostrum facere blanditiis quam dolorum, reiciendis dolorem.</p>
+    </div>
+    <div id="second">
+        <h1>Hello World!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At neque voluptates sint libero nostrum facere blanditiis quam dolorum, reiciendis dolorem.</p>
+    </div>
+    <div id="third">
+        <h1>Hello World!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At neque voluptates sint libero nostrum facere blanditiis quam dolorum, reiciendis dolorem.</p>
+    </div>
+    
+</body>
+</html>
