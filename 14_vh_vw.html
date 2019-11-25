@@ -5,8 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Vh and Vw units</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        header {
+            /* source.unsplash.com */
+            background: #333 url('https://source.unsplash.com/daily') no-repeat center center/cover;
+            color: #fff;
+            /* height: 100%;
+             this wont take the whole page with this background
+             */
+             /* vh will take up the full page with 100vh! 50 is a half...and so on.. */
+            height: 100vh;
+            text-align: center;
+            /* same with width...50% and 50vw */
+            /* width: 50%; */
+            /* width: 50vw; */
+            padding: 2rem;
+            padding-top: 15rem;
+        }
+
+        header h1 {
+            font-size: 3rem;
+        }
+
+        header p {
+            margin: 1rem 0;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #cac1c1;
+            color: #333;
+            padding: 0.75rem 2rem;
+        }
+
+        .btn:hover {
+            background: #333;
+            color: #cac1c1;
+            border-radius: 5px;
+            border: 1px solid #fff;
+        }
+
+        section {
+            padding: 2rem;
+        }
+
+        @media(max-height: 450px) {
+            header {
+                padding-top: 5rem;
+            }
+        }
+    
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Welcome To Our Website</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ducimus eaque tenetur aspernatur debitis praesentium.</p>
+        <a href="#" class="btn">Find Out More</a>
+    </header>
+
+    <section>
+        <h3>About Our Company</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsam officiis soluta, molestiae modi voluptatibus sunt ex eius praesentium cupiditate quibusdam voluptate, rerum nihil sapiente iure odio animi esse perspiciatis repellendus eligendi minima saepe natus. Quod molestiae dolores unde odio!</p>
+    </section>
     
 </body>
 </html>
