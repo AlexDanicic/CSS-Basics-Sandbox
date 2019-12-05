@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex Basics</title>
+    <style>
+        h1 {
+            text-align: center;
+            border-bottom: 2px dotted red;
+        }
+        #container {
+            display: flex;            
+            flex-direction: column;
+        }
+        #container1 {
+            display: flex;
+            flex-direction: row;             
+        }
+        #container2 {
+            display: flex;
+            flex-direction: row-reverse;             
+        }
+        #container3 {
+            display: flex;
+            /* flex-direction: row-reverse;              */
+        }
+        #container4 {
+            display: flex;
+        }
+        #container5 {
+            display: flex;
+        }
+        #container6 {
+            display: flex;
+        }
+        #container7 {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+
+
+        .item {
+            background: #444;
+            color: #fff;
+            border: 1px solid #8a2be2;
+            padding: 1rem;            
+            text-align: center;
+        }        
+        .item1 {
+            background: #bcc2a6;
+            color: #fff;
+            border: 1px solid #8a2be2;
+            padding: 1rem;            
+            text-align: center;
+        }        
+        .item2 {
+            background: #4b36ac;
+            color: #fff;
+            border: 1px solid #8a2be2;
+            padding: 1rem;            
+            text-align: center;
+        }        
+        .item3 {
+            background: #36ac89;
+            color: #fff;
+            border: 1px solid #8a2be2;
+            padding: 1rem;            
+            text-align: center;
+            flex: 1;
+        }        
+        .item4 {
+            background: #6bac36;
+            color: #fff;
+            border: 1px solid #8a2be2;
+            padding: 1rem;            
+            text-align: center; 
+            flex: 1;           
+        } 
+        .item4:first-child {            
+            flex: 2;            
+        } 
+        .item5 {
+            background: #53c6e9;
+            color: #fff;
+            border: 1px solid #8a2be2;
+            padding: 1rem;            
+            text-align: center; 
+            flex: 1;           
+        } 
+        .item5:first-child {            
+            flex: 3;            
+        } 
+        .item6 {
+            background: #8fe953;
+            color: #fff;
+            border: 1px solid #8a2be2;
+            padding: 1rem;            
+            text-align: center; 
+            flex: 1;
+            margin: 0.75rem;           
+        } 
+        .item6:first-child {            
+            flex: 1;            
+        } 
+        .item7 {
+            background: #db831e;
+            color: #fff;
+            border: 1px solid #8a2be2;
+            padding: 1rem;            
+            text-align: center; 
+            flex: 1;
+            margin: 0.75rem;           
+        } 
+        .item7:first-child {            
+            flex: 1;            
+        } 
+
+    </style>
+</head>
+<body>
+    <h1>Flex-Direction-Column</h1>    
+    <div id="container">
+        <div class="item"><h3>Item 1</h3></div>
+        <div class="item"><h3>Item 2</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+    </div>
+    <h1>Flex-Direction-Row</h1>
+    <div id="container1">
+        <div class="item1"><h3>Item 1</h3></div>
+        <div class="item1"><h3>Item 2</h3></div>
+        <div class="item1"><h3>Item 3</h3></div>
+    </div>
+    <h1>Flex-Direction-Row-Reverse</h1>
+    <div id="container2">
+        <div class="item2"><h3>Item 1</h3></div>
+        <div class="item2"><h3>Item 2</h3></div>
+        <div class="item2"><h3>Item 3</h3></div>
+    </div>
+    <h1>Flex-Sizing:position 1</h1>
+    <p>*Does not matter what is the width, the boxes will be always equal with "flex:1"</p>
+    <div id="container3">
+        <div class="item3"><h3>Item 1</h3></div>
+        <div class="item3"><h3>Item 2</h3></div>
+        <div class="item3"><h3>Item 3</h3></div>
+    </div>
+    <h1>Flex-Sizing:position 1 and 2</h1>
+    <div id="container4">
+        <div class="item4"><h3>Item 1</h3></div>
+        <div class="item4"><h3>Item 2</h3></div>        
+    </div>
+    <h1>Flex-Sizing:position 1 and 3</h1>
+    <div id="container5">
+        <div class="item5"><h3>Item 1</h3></div>
+        <div class="item5"><h3>Item 2</h3></div>        
+    </div>
+    <h1>Flex-Sizing:position 1 and 1 with Margin</h1>
+    <div id="container6">
+        <div class="item6"><h3>Item 1</h3></div>
+        <div class="item6"><h3>Item 2</h3></div>        
+        <div class="item6"><h3>Item 3</h3></div>        
+    </div>
+    <h1>Flex-Wrap:Wrap</h1>
+    <div id="container7">
+        <div class="item7"><h3>Item 1</h3></div>
+        <div class="item7"><h3>Item 2</h3></div>        
+        <div class="item7"><h3>Item 3</h3></div>        
+        <div class="item7"><h3>Item 4</h3></div>
+        <div class="item7"><h3>Item 5</h3></div>        
+        <div class="item7"><h3>Item 6</h3></div>        
+        <div class="item7"><h3>Item 7</h3></div>
+        <div class="item7"><h3>Item 8</h3></div>        
+        <div class="item7"><h3>Item 9</h3></div>        
+        <div class="item7"><h3>Item 10</h3></div>
+        <div class="item7"><h3>Item 11</h3></div>        
+        <div class="item7"><h3>Item 12</h3></div>        
+        <div class="item7"><h3>Item 13</h3></div>        
+        <div class="item7"><h3>Item 14</h3></div>
+        <div class="item7"><h3>Item 15</h3></div>        
+        <div class="item7"><h3>Item 16</h3></div>        
+    </div>
+</body>
+</html>
