@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex Align</title>
+    <style>
+        body {
+            background: chocolate;
+        }
+        h1 {
+            text-align: center;
+            color: aqua;
+            text-shadow: 2px 2px 2px #333;
+        }
+        #container {
+            background: #f0cd98;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .item,
+        .item1, 
+        .item2, 
+        .item3,
+        .item4,
+        .item5,
+        .item6,
+        .item7,
+        .item8,
+        .item9,
+        .item10,
+        .item11,
+        .item12,
+        .item13,
+        .item14,
+        .item15 {
+            background: #f5f5f5;
+            border: 1px solid #333;
+            text-align: center;
+            padding: 1rem;
+            margin: 0.5rem;
+            /* width: 200px; */
+            flex-basis: 200px;
+        }
+        
+        #container1 {
+            background: #f0cd98;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        #container2 {
+            background: #f0cd98;
+            display: flex;
+            justify-content: center;
+        }
+
+        #container3 {
+            background: #f0cd98;
+            display: flex;
+            justify-content: space-around;
+        }
+       
+        #container4 {
+            background: #f0cd98;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        #container5 {
+            background: #f0cd98;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #container6 {
+            background: #f0cd98;
+            display: flex;
+            justify-content: space-evenly;
+            height: 500px;
+            align-items: stretch;
+        }
+
+        #container7 {
+            background: #f0cd98;
+            display: flex;
+            justify-content: space-evenly;
+            height: 500px;
+            align-items: flex-start;
+        }
+
+        #container8 {
+            background: #f0cd98;
+            display: flex;
+            justify-content: space-evenly;
+            height: 500px;
+            align-items: flex-end;
+        }
+
+        #container9 {
+            background: #f0cd98;
+            display: flex;
+            justify-content: space-evenly;
+            height: 500px;
+            align-items: center;
+        }
+
+        #container10 {
+            background: #f0cd98;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-evenly;
+            height: 600px;
+            align-items: baseline;
+            align-content: flex-start;
+        }
+
+        #container11 {
+            background: #f0cd98;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-evenly;
+            height: 600px;
+            align-items: baseline;
+            align-content: flex-end;
+        }
+
+        #container12 {
+            background: #f0cd98;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-evenly;
+            height: 600px;
+            align-items: baseline;
+            align-content: center;
+        }
+
+        #container13 {
+            background: #f0cd98;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-evenly;
+            height: 600px;
+            align-items: baseline;
+            align-content: space-around;
+        }
+
+        #container14 {
+            background: #f0cd98;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-evenly;
+            height: 600px;
+            align-items: baseline;
+            align-content: space-between;
+        }
+
+        #container15 {
+            height: 600px;
+            background: #f0cd98;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-evenly;            
+            align-items: baseline;
+            /* align-content: space-between; */
+        }
+
+        /* align single item vertical */
+        .item-alignment1 {
+            align-self: flex-end;
+            /* 
+                Options: 
+                flex-start
+                flex-end
+                center
+                baseline
+                stretch
+             */
+        }
+
+        /* Order Alignment */
+
+        #container16 {
+            background: #f0cd98;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-evenly;
+            height: 600px;
+            align-items: baseline;
+            align-content: space-between;
+        }
+
+        .order1 {
+            order: 3;
+        }
+        .order2 {
+            order: 1;
+        }
+        .order3 {
+            order: 2;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Flex-Start</h1>
+    <div id="container">
+        <div class="item item-1"><h3>Item 1</h3></div>
+        <div class="item item-2"><h3>Item 2</h3></div>
+        <div class="item item-3"><h3>Item 3</h3></div>
+    </div>
+    <h1>Flex-End</h1>
+    <div id="container1">
+        <div class="item1 item-1"><h3>Item 1</h3></div>
+        <div class="item1 item-2"><h3>Item 2</h3></div>
+        <div class="item1 item-3"><h3>Item 3</h3></div>
+    </div>
+    <h1>Center</h1>
+    <div id="container2">
+        <div class="item2 item-1"><h3>Item 1</h3></div>
+        <div class="item2 item-2"><h3>Item 2</h3></div>
+        <div class="item2 item-3"><h3>Item 3</h3></div>
+    </div>
+    <h1>Space-Around</h1>
+    <div id="container3">
+        <div class="item3 item-1"><h3>Item 1</h3></div>
+        <div class="item3 item-2"><h3>Item 2</h3></div>
+        <div class="item3 item-3"><h3>Item 3</h3></div>
+    </div>
+    <h1>Space-Between</h1>
+    <div id="container4">
+        <div class="item4 item-1"><h3>Item 1</h3></div>
+        <div class="item4 item-2"><h3>Item 2</h3></div>
+        <div class="item4 item-3"><h3>Item 3</h3></div>
+    </div>
+    <h1>Space-Evenly</h1>
+    <div id="container5">
+        <div class="item5 item-1"><h3>Item 1</h3></div>
+        <div class="item5 item-2"><h3>Item 2</h3></div>
+        <div class="item5 item-3"><h3>Item 3</h3></div>
+    </div>
+    <h1>Some Height and Align Items:Stretch</h1>
+    <div id="container6">
+        <div class="item6 item-1"><h3>Item 1</h3></div>
+        <div class="item6 item-2"><h3>Item 2</h3></div>
+        <div class="item6 item-3"><h3>Item 3</h3></div>
+    </div>
+    <h1>Some Height and Align Items:Flex-Start</h1>
+    <div id="container7">
+        <div class="item7 item-1"><h3>Item 1</h3></div>
+        <div class="item7 item-2"><h3>Item 2</h3></div>
+        <div class="item7 item-3"><h3>Item 3</h3></div>
+    </div>
+    <h1>Some Height and Align Items:Flex-End</h1>
+    <div id="container8">
+        <div class="item8 item-1"><h3>Item 1</h3></div>
+        <div class="item8 item-2"><h3>Item 2</h3></div>
+        <div class="item8 item-3"><h3>Item 3</h3></div>
+    </div>
+    <h1>Some Height and Align Items:Center</h1>
+    <div id="container9">
+        <div class="item9 item-1"><h3>Item 1</h3></div>
+        <div class="item9 item-2"><h3>Item 2</h3></div>
+        <div class="item9 item-3"><h3>Item 3</h3></div>
+    </div>
+    <h1>Some Height,Flex-Wrap:Wrap, Align Items:Baseline and Align Content:Flex-Start</h1>
+    <div id="container10">
+        <div class="item10 item-1"><h3>Item 1</h3></div>
+        <div class="item10 item-2"><h3>Item 2</h3></div>
+        <div class="item10 item-3"><h3>Item 3</h3></div>
+        <div class="item10 item-4"><h3>Item 4</h3></div>
+        <div class="item10 item-5"><h3>Item 5</h3></div>
+        <div class="item10 item-6"><h3>Item 6</h3></div>
+        <div class="item10 item-7"><h3>Item 7</h3></div>
+        <div class="item10 item-8"><h3>Item 8</h3></div>
+        <div class="item10 item-9"><h3>Item 9</h3></div>
+        <div class="item10 item-10"><h3>Item 10</h3></div>
+    </div>
+    <h1>Some Height,Flex-Wrap:Wrap, Align Items:Baseline and Align Content:Flex-End</h1>
+    <div id="container11">
+        <div class="item11 item-1"><h3>Item 1</h3></div>
+        <div class="item11 item-2"><h3>Item 2</h3></div>
+        <div class="item11 item-3"><h3>Item 3</h3></div>
+        <div class="item11 item-4"><h3>Item 4</h3></div>
+        <div class="item11 item-5"><h3>Item 5</h3></div>
+        <div class="item11 item-6"><h3>Item 6</h3></div>
+        <div class="item11 item-7"><h3>Item 7</h3></div>
+        <div class="item11 item-8"><h3>Item 8</h3></div>
+        <div class="item11 item-9"><h3>Item 9</h3></div>
+        <div class="item11 item-10"><h3>Item 10</h3></div>
+    </div>
+    <h1>Some Height,Flex-Wrap:Wrap, Align Items:Baseline and Align Content:Center</h1>
+    <div id="container12">
+        <div class="item12 item-1"><h3>Item 1</h3></div>
+        <div class="item12 item-2"><h3>Item 2</h3></div>
+        <div class="item12 item-3"><h3>Item 3</h3></div>
+        <div class="item12 item-4"><h3>Item 4</h3></div>
+        <div class="item12 item-5"><h3>Item 5</h3></div>
+        <div class="item12 item-6"><h3>Item 6</h3></div>
+        <div class="item12 item-7"><h3>Item 7</h3></div>
+        <div class="item12 item-8"><h3>Item 8</h3></div>
+        <div class="item12 item-9"><h3>Item 9</h3></div>
+        <div class="item12 item-10"><h3>Item 10</h3></div>
+    </div>
+    <h1>Some Height,Flex-Wrap:Wrap, Align Items:Baseline and Align Content:Space-Around</h1>
+    <div id="container13">
+        <div class="item13 item-1"><h3>Item 1</h3></div>
+        <div class="item13 item-2"><h3>Item 2</h3></div>
+        <div class="item13 item-3"><h3>Item 3</h3></div>
+        <div class="item13 item-4"><h3>Item 4</h3></div>
+        <div class="item13 item-5"><h3>Item 5</h3></div>
+        <div class="item13 item-6"><h3>Item 6</h3></div>
+        <div class="item13 item-7"><h3>Item 7</h3></div>
+        <div class="item13 item-8"><h3>Item 8</h3></div>
+        <div class="item13 item-9"><h3>Item 9</h3></div>
+        <div class="item13 item-10"><h3>Item 10</h3></div>
+    </div>
+    <h1>Some Height,Flex-Wrap:Wrap, Align Items:Baseline and Align Content:Space-Between</h1>
+    <div id="container14">
+        <div class="item14 item-1"><h3>Item 1</h3></div>
+        <div class="item14 item-2"><h3>Item 2</h3></div>
+        <div class="item14 item-3"><h3>Item 3</h3></div>
+        <div class="item14 item-4"><h3>Item 4</h3></div>
+        <div class="item14 item-5"><h3>Item 5</h3></div>
+        <div class="item14 item-6"><h3>Item 6</h3></div>
+        <div class="item14 item-7"><h3>Item 7</h3></div>
+        <div class="item14 item-8"><h3>Item 8</h3></div>
+        <div class="item14 item-9"><h3>Item 9</h3></div>
+        <div class="item14 item-10"><h3>Item 10</h3></div>
+    </div>
+    <h1>Individual Align, Align-Self:Flex-End</h1>
+    <div id="container15">
+        <div class="item15 item-1"><h3>Item 1</h3></div>
+        <div class="item15 item-alignment1"><h3>Item 2</h3></div>
+        <div class="item15 item-3"><h3>Item 3</h3></div>
+    </div>
+    <h1>Order Alignment</h1>
+    <div id="container16">
+        <div class="item15 order1"><h3>Item 1</h3></div>
+        <div class="item15 order2"><h3>Item 2</h3></div>
+        <div class="item15 order3"><h3>Item 3</h3></div>
+    </div>
+</body>
+</html>
